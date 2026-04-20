@@ -30,6 +30,8 @@ In order to create a PR summary you MUST follow precisely the following steps:
     - **Refactoring** — only if refactoring is present in the log. Omit the section otherwise.
     - `---`
     - **Breaking Changes** — only if you identify breaking changes in the log. Use your judgement and re-think before including anything here. Omit the section otherwise.
+    - `---`
+    - **Unique IDs** - only if you identify unique ids on step 5. Use a bullet list of all unique ids found.
 10. For terms that reference specific code identifiers, use inline code (`` `word` ``) to represent them.
 11. Output the result as a raw Markdown code block so it is not rendered by the CLI.
 12. Do not mention commit hashes or any abbreviation of them in the final output.
