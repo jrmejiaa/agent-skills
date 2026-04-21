@@ -13,9 +13,8 @@ This skill guides creation of a PR summary for a new feature of a project.
 
 In order to create a PR summary you MUST follow precisely the following steps:
 
-1. Determine the base branch by checking the repository's default branch (e.g., via `git remote show origin` or
-    `gh repo view --json defaultBranchRef`). If detection is ambiguous or fails, ask the user. Do not assume `main`
-    or `master`.
+1. Determine the base branch by checking the repository's default branch (e.g., via `git remote show origin`). 
+    If detection is ambiguous or fails, ask the user. Do not assume `main` or `master`.
 2. Get the number of commits that separates the current branch from the base branch. If the branch has no commits
     ahead, inform the user and stop.
 3. Get the full commit log (subject + body) of the last `NUM_COMMITS` commits, where `NUM_COMMITS` is the number
