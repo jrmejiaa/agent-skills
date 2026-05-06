@@ -13,6 +13,12 @@ This skill guides creation of a git commit message for the current project.
 
 - Amending commits (`--amend`) is not handled by this skill.
 
+## Hard Gates (check BEFORE generating any message)
+
+1. **Staged-only rule**: If `git diff --staged` is non-empty, use ONLY the staged diff.
+   Do NOT read, analyze, or reference unstaged changes or untracked files.
+   Skip `git diff` (unstaged) and `git ls-files --others` entirely.
+
 ## Steps
 
 1. Extract the ticket/issue ID from the current branch name (e.g.,
