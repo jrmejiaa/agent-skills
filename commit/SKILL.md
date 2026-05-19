@@ -18,6 +18,8 @@ This skill guides creation of a git commit message for the current project.
 1. **Staged-only rule**: If `git diff --staged` is non-empty, use ONLY the staged diff.
    Do NOT read, analyze, or reference unstaged changes or untracked files.
    Skip `git diff` (unstaged) and `git ls-files --others` entirely.
+2. **Agentic files**: The files under `.kiro`, `.ai` or `.claude` any other common folder
+   of AI context, must not be included in the files to considered.
 
 ## Steps
 
@@ -33,8 +35,8 @@ This skill guides creation of a git commit message for the current project.
 5. Collect the diff content:
     - For small diffs (<20 files): capture the full diff output.
     - For large diffs (20+ files): capture `git diff --stat` and the full diff.
-6. **Delegate message generation to a subagent named `opus-agent`.** Write the diff content to `/tmp/commit-diff.txt`
-    and invoke a subagent using `agent_name: "opus-agent"` with the following query:
+6. **Delegate message generation to a subagent named `haiku-agent`.** Write the diff content to `/tmp/commit-diff.txt`
+    and invoke a subagent using `agent_name: "haiku-agent"` with the following query:
 
     > Generate a conventional commit message for the diff in `/tmp/commit-diff.txt`.
     > Follow the guidelines in `/home/mejia/.kiro/skills/commit/references/commits-guidelines.md`.
