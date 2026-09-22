@@ -32,9 +32,8 @@ In order to create a PR summary you MUST follow precisely the following steps:
     prefixes to inform section categorization (e.g., `refactor:` → Refactoring, `feat:`/`fix:` → Key Changes).
 10. For terms that reference specific code identifiers, use inline code (`` `word` ``) to represent them.
 11. The structure of the PR body must be:
-    - **General Overview** — no more than 280 characters.
-    - `---`
-    - **Unique IDs** — only if unique IDs were found in step 7. Use a bullet list of all unique IDs.
+    - **General Overview** — no more than 280 characters. If unique IDs were found in step 7, append them as a bullet
+        list directly under the overview text (still within the same section, no separate header).
     - `---`
     - **Key Changes** — subdivided by area. Each subdivision must be a bold bullet point. Prefer grouping by domain
         concern (e.g., **Authentication**, **Billing**, **API**). Fall back to directory-based grouping if the commits

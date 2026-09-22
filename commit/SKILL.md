@@ -8,6 +8,8 @@ This skill guides creation of a git commit message for the current project.
 ## When to Use
 
 - User asks to create, write, or generate a git commit message.
+- User says "commit on"
+- User says "commit"
 
 ## Out of Scope
 
