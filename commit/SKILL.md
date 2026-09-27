@@ -20,8 +20,9 @@ This skill guides creation of a git commit message for the current project.
 1. **Staged-only rule**: If `git diff --staged` is non-empty, use ONLY the staged diff.
    Do NOT read, analyze, or reference unstaged changes or untracked files.
    Skip `git diff` (unstaged) and `git ls-files --others` entirely.
-2. **Agentic files**: The files under `.kiro`, `.ai` or `.claude` any other common folder
-   of AI context, must not be included in the files to considered.
+2. **Respect the user's staging**: Whatever the user has staged is what gets committed. Files under
+   `.kiro`, `.ai`, `.claude`, or any other AI-context folder are included when staged — do **not**
+   filter them out. It is the user's choice what belongs in the stage.
 
 ## Steps
 
